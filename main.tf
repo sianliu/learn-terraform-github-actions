@@ -19,7 +19,6 @@ terraform {
 
 provider "aws" {
   region = "ap-southeast-1"
-  profile = "wallex-dev"
 }
 
 provider "random" {}
