@@ -6,6 +6,7 @@ on:
       - master
   pull_request:
 
+
 jobs:
   terraform:
     name: "Terraform"
@@ -34,6 +35,7 @@ jobs:
         run: terraform plan -no-color
         continue-on-error: true
 
+      - name: Update pull request
       - uses: actions/github-script@0.9.0
         if: github.event_name == 'pull_request'
         env:
